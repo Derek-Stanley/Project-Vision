@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Firebase.Analytics;
 using UnityEngine;
 
 public class rotateToPosition : MonoBehaviour
@@ -19,6 +20,7 @@ public class rotateToPosition : MonoBehaviour
     List<string> instructions;
     public string instruction;
     ViewData view;
+    float timer = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +30,14 @@ public class rotateToPosition : MonoBehaviour
         rotationsEuler = view.rotationsEuler;
         instructions = view.instructions;
         index = 0;
-
+        timer=0f;
         Invoke("enableCamera", 2);
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer+=Time.deltaTime;
         isRotated = gameObject.GetComponent<roateAround>().rotated;
         isRotating = gameObject.GetComponent<RotateCamera>().isRotating;
         instruction=instructions[index];
@@ -42,7 +45,7 @@ public class rotateToPosition : MonoBehaviour
             camera_move_enabled = false;
         } else {
             camera_move_enabled = true;
-        }
+           }
 
         if (isRotated && camera_move_enabled)
         {
@@ -53,6 +56,14 @@ public class rotateToPosition : MonoBehaviour
         instruction=view.instructions[index];
     }
     public void changeInstruction(int dir) {
+        FirebaseAnalytics.LogEvent(
+        FirebaseAnalytics.EventSelectContent,
+        new Parameter(
+            FirebaseAnalytics.ParameterItemId, index),
+        new Parameter(
+            FirebaseAnalytics.ParameterContentType, (timer/60).ToString())
+        );
+        timer=0;
         index=index+dir;
         instruction=instructions[index];
     }
@@ -61,5 +72,15 @@ public class rotateToPosition : MonoBehaviour
         camera_move_enabled = true;
     }
 
+    private void OnDestroy() {
+        FirebaseAnalytics.LogEvent(
+        FirebaseAnalytics.EventSelectContent,
+        new Parameter(
+            FirebaseAnalytics.ParameterItemId, index),
+        new Parameter(
+            FirebaseAnalytics.ParameterContentType, (timer/60).ToString())
+        );
+        timer=0;
+    }
    
 }

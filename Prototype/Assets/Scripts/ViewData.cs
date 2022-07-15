@@ -28,6 +28,7 @@ public class ViewData :MonoBehaviour
         instructions.Add("Now press the home button 3 times");
         instructions.Add("Congratulations! Your device has been unlocked");
         // instructions.Add("Product Name: Nintendo Switch OLED");
+        
     }
     
 }

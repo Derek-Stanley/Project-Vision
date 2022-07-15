@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">615777201569</string>
+  <string name="google_storage_bucket" translatable="false">project-vision-7424a.appspot.com</string>
+  <string name="project_id" translatable="false">project-vision-7424a</string>
+  <string name="google_api_key" translatable="false">AIzaSyDVAEngJomHK91xGXSKAVRmj7w3y2SidsI</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDVAEngJomHK91xGXSKAVRmj7w3y2SidsI</string>
+  <string name="google_app_id" translatable="false">1:615777201569:android:401632c8c2c5ba7ae8efe0</string>
+  <string name="default_web_client_id" translatable="false">615777201569-pqugg5pislu2u3196ijtll9s4ga3u3cg.apps.googleusercontent.com</string>
+</resources>

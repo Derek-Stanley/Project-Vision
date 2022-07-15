@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "615777201569",
+    "project_id": "project-vision-7424a",
+    "storage_bucket": "project-vision-7424a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615777201569:android:401632c8c2c5ba7ae8efe0",
+        "android_client_info": {
+          "package_name": "com.firebase.projectVision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615777201569-pqugg5pislu2u3196ijtll9s4ga3u3cg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVAEngJomHK91xGXSKAVRmj7w3y2SidsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615777201569-pqugg5pislu2u3196ijtll9s4ga3u3cg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
