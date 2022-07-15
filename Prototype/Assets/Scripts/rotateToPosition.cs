@@ -25,12 +25,13 @@ public class rotateToPosition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FirebaseAnalytics.SetAnalyticsCollectionEnabled(true);
         view = gameObject.GetComponent<ViewData>();
         positions = view.positions;
         rotationsEuler = view.rotationsEuler;
         instructions = view.instructions;
         index = 0;
-        timer=0f;
+        timer=0;
         Invoke("enableCamera", 2);
     }
 
